@@ -10,7 +10,7 @@ export default {
   return new Response("Unauthorized", { status: 401 });
 }
 
-      const webhookUrl = `${url.origin}/telegram`;
+     const webhookUrl = `${url.origin}/telegram/`;
 
       const response = await fetch(
         `https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/setWebhook`,

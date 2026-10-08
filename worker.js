@@ -6,9 +6,9 @@ export default {
     if (url.pathname === "/setup-webhook" && request.method === "GET") {
       const key = url.searchParams.get("key");
 
-      if (!env.WEBHOOK_SETUP_SECRET || key !== env.WEBHOOK_SETUP_SECRET) {
-        return new Response("Unauthorized", { status: 401 });
-      }
+      if (key !== "AviatorWebhook2026!") {
+  return new Response("Unauthorized", { status: 401 });
+}
 
       const webhookUrl = `${url.origin}/telegram`;
 
